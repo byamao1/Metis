@@ -39,8 +39,8 @@ export default function loginValidate(location, history, navigation) {
         window.uw.storage.set('global.user', { userName, isAdmin: isAdmin === 'true' ? true : false, userId });
         const { pathname, search } = location;
         let queryWithoutTicket = _.omit(qs.parse(search.replace(/^\?/, '')), ['ticket', 'loginParam', 'lengh', 'length', 'sessionKey']);
-        queryWithoutTicket = qs.stringify(queryWithoutTicket);
-        history.replace(`${pathname}${queryWithoutTicket === '' ? '' : `?${queryWithoutTicket}`}`);
+        let queryWoTicket = qs.stringify(queryWithoutTicket);
+        history.replace(`${pathname}${queryWoTicket === '' ? '' : `?${queryWoTicket}`}`);
       }
     },
   });
