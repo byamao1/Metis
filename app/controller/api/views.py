@@ -4,7 +4,7 @@ import json
 from functools import wraps
 from django.shortcuts import render
 from django.http import FileResponse
-from render import render_json
+from app.controller.render import render_json
 from app.service.time_series_detector.anomaly_service import *
 from app.service.time_series_detector.sample_service import *
 from app.service.time_series_detector.task_service import *

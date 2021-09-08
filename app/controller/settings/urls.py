@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from api import views as api_views
+from app.controller.api import views as api_views
+
 
 urlpatterns = [
     url(r'^SearchAnomaly$', api_views.search_anomaly, name='search_anomaly'),

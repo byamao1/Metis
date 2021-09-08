@@ -10,7 +10,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 import traceback
 from functools import wraps
-from errorcode import *
+from app.common.errorcode import ERR_CODE, THROW_EXP
 
 DEFAULT_WINDOW = 180
 INPUT_LEN_ENG_MAX = 32
