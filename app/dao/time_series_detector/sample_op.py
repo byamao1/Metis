@@ -12,7 +12,7 @@ import datetime
 import uuid
 import csv
 import codecs
-import MySQLdb
+import pymysql
 from app.dao.db_common import database
 from app.common.common import *
 from app.common.errorcode import *
@@ -21,7 +21,7 @@ from app.common.errorcode import *
 class SampleOperation(object):
 
     def __init__(self):
-        self.__conn = MySQLdb.connect(host=database.HOST, port=database.PORT, user=database.USER, passwd=database.PASSWD, db=database.DB)
+        self.__conn = pymysql.connect(host=database.HOST, port=database.PORT, user=database.USER, passwd=database.PASSWD, db=database.DB)
         self.__cur = self.__conn.cursor()
         self.__cur.execute("SET NAMES UTF8")
 

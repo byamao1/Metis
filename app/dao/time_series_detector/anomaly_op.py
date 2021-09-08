@@ -8,7 +8,7 @@ https://opensource.org/licenses/BSD-3-Clause
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 """
 
-import MySQLdb
+import pymysql
 from app.dao.db_common import database
 from app.dao.time_series_detector.sample_op import *
 from app.common.common import *
@@ -18,7 +18,7 @@ from app.common.errorcode import *
 class AbnormalOperation(object):
 
     def __init__(self):
-        self.__conn = MySQLdb.connect(host=database.HOST, port=database.PORT, user=database.USER, passwd=database.PASSWD, db=database.DB)
+        self.__conn = pymysql.connect(host=database.HOST, port=database.PORT, user=database.USER, passwd=database.PASSWD, db=database.DB)
         self.__cur = self.__conn.cursor()
         self.__cur.execute("SET NAMES UTF8")
         self.__sample = SampleOperation()
