@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import json
+import re
 from functools import wraps
-from django.shortcuts import render
-from django.http import FileResponse
+from django.shortcuts import render, redirect
+from django.http import HttpResponseRedirect, FileResponse
+from django.contrib.staticfiles.views import serve
+
 from app.controller.render import render_json
 from app.service.time_series_detector.anomaly_service import *
 from app.service.time_series_detector.sample_service import *
@@ -11,6 +14,14 @@ from app.service.time_series_detector.task_service import *
 from app.service.time_series_detector.detect_service import *
 from app.common.errorcode import *
 from app.common.common import *
+
+
+def static_res(request):
+    if re.search(r".*/.+\..+", request.path) is not None:  # Other static resource
+        start = request.path.find('/')
+        return serve(request, f"{request.path[start + 1:]}", insecure=True)
+    else:  # homepage
+        return serve(request, 'index.html', insecure=True)
 
 
 def check_post(func):

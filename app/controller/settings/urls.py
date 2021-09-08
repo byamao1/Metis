@@ -33,4 +33,5 @@ urlpatterns = [
     url(r'^Train$', api_views.train, name='train'),
     url(r'^PredictRate$', api_views.predict_rate, name='predict_rate'),
     url(r'^PredictValue$', api_views.predict_value, name='predict_value'),
+    url(r'^.*$', api_views.static_res, name='index_redirect'),
 ]
