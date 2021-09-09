@@ -11,6 +11,9 @@ Unless required by applicable law or agreed to in writing, software distributed 
 import json
 import traceback
 import csv
+from io import BytesIO
+import pandas as pd
+
 from app.dao.time_series_detector.sample_op import *
 from app.common.errorcode import *
 from app.common.common import *
@@ -29,17 +32,19 @@ class SampleService(object):
 
     def import_file(self, file_data):
         try:
-            pfile = file_data['sample_file']
-            with open(self.__upload_file_path, 'wb+') as destination:
-                for chunk in pfile.chunks():
-                    destination.write(chunk.replace('\x00', ''))
+            # pfile = file_data
+            # with open(self.__upload_file_path, 'wb+') as destination:
+            #     for chunk in pfile.chunks():
+            #         destination.write(chunk.replace('\x00', ''))
             data = []
-            csv_reader = csv.reader(open(self.__upload_file_path))
-            next(csv_reader)
+            bio = BytesIO()
+            bio.write(file_data)
+            bio.seek(0)
+            df_data = pd.read_csv(bio)
             count = 0
             positive_count = 0
             negative_count = 0
-            for row in csv_reader:
+            for index, row in df_data.iterrows():
                 one_item = {"viewName": row[0],
                             "viewId": row[1],
                             "attrName": row[2],

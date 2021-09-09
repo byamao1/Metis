@@ -12,6 +12,9 @@ import datetime
 import uuid
 import csv
 import codecs
+from io import StringIO
+import pandas as pd
+
 import pymysql
 from app.dao.db_common import database
 from app.common.common import *
@@ -179,14 +182,12 @@ class SampleOperation(object):
                 row[11]
             ])
         head = ['指标集名称', '指标集id', '指标名称', '指标id', '样本来源', '训练集_测试集', '正样本_负样本', '样本窗口', 'dataC', 'dataB', 'dataA', '数据时间戳']
-        uuid_str = uuid.uuid4().hex[:8]
-        download_file_path = UPLOAD_FILE % uuid_str
-        with open(download_file_path, 'w') as pfile:
-            pfile.write(codecs.BOM_UTF8)
-            writer = csv.writer(pfile)
-            writer.writerow(head)
-            writer.writerows(sample_list)
-        return 0, download_file_path
+        # uuid_str = uuid.uuid4().hex[:8]
+        # download_file_path = UPLOAD_FILE % uuid_str
+        df_sample_list = pd.DataFrame(columns=head, data=sample_list)
+        sio = StringIO()
+        df_sample_list.to_csv(sio, encoding='utf-8', index=False)
+        return 0, sio
 
     def query_sample(self, data):
         item_per_page = data['itemPerPage']
