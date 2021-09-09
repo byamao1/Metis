@@ -9,7 +9,7 @@ Unless required by applicable law or agreed to in writing, software distributed 
 """
 
 from sklearn.ensemble import IsolationForest
-from time_series_detector.common.tsd_common import *
+from app.time_series_detector.common.tsd_common import *
 
 
 class IForest(object):

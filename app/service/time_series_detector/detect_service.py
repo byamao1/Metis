@@ -14,11 +14,11 @@ import threading
 from app.dao.time_series_detector import anomaly_op
 from app.dao.time_series_detector import sample_op
 from app.dao.time_series_detector import train_op
-from time_series_detector.algorithm import xgboosting
-from time_series_detector import detect
+from app.time_series_detector.algorithm import xgboosting
+from app.time_series_detector import detect
 from app.common.errorcode import *
 from app.common.common import *
-from time_series_detector.common.tsd_errorcode import *
+from app.time_series_detector.common.tsd_errorcode import *
 MODEL_PATH = os.path.join(os.path.dirname(__file__), './model/')
 
 

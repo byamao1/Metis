@@ -9,9 +9,9 @@ Unless required by applicable law or agreed to in writing, software distributed 
 """
 
 import os
-from time_series_detector.algorithm import isolation_forest, ewma, polynomial_interpolation, statistic, xgboosting
-from time_series_detector.common.tsd_errorcode import *
-from time_series_detector.common.tsd_common import *
+from app.time_series_detector.algorithm import isolation_forest, ewma, polynomial_interpolation, statistic, xgboosting
+from app.time_series_detector.common.tsd_errorcode import *
+from app.time_series_detector.common.tsd_common import *
 MODEL_PATH = os.path.join(os.path.dirname(__file__), './model/')
 
 

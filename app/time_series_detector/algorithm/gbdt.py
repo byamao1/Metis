@@ -13,9 +13,9 @@ import pickle
 import numpy as np
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.externals import joblib
-from time_series_detector.feature import feature_service
-from time_series_detector.common.tsd_common import *
-from time_series_detector.common.tsd_errorcode import *
+from app.time_series_detector.feature import feature_service
+from app.time_series_detector.common.tsd_common import *
+from app.time_series_detector.common.tsd_errorcode import *
 
 
 MODEL_PATH = os.path.join(os.path.dirname(__file__), '../model/')

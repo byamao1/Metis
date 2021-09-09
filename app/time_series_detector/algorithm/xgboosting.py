@@ -10,9 +10,9 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 import os
 import xgboost as xgb
-from time_series_detector.feature import feature_service
-from time_series_detector.common.tsd_errorcode import *
-from time_series_detector.common.tsd_common import *
+from app.time_series_detector.feature import feature_service
+from app.time_series_detector.common.tsd_errorcode import *
+from app.time_series_detector.common.tsd_common import *
 MODEL_PATH = os.path.join(os.path.dirname(__file__), '../model/')
 DEFAULT_MODEL = MODEL_PATH + "xgb_default_model"
 
