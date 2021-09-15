@@ -2,18 +2,33 @@
 from __future__ import unicode_literals
 import re
 
-from fastapi import FastAPI, File
+from fastapi import FastAPI, File, WebSocket
 from fastapi.staticfiles import StaticFiles
 from fastapi.requests import Request
-from starlette.responses import StreamingResponse
+from fastapi.responses import StreamingResponse
+from pywebio.platform.fastapi import webio_routes
 
 from app.controller.render import render_json
 from app.service.time_series_detector.anomaly_service import *
 from app.service.time_series_detector.sample_service import *
 from app.service.time_series_detector.task_service import *
 from app.service.time_series_detector.detect_service import *
+from app.service.explore.data_explore import explore
 
 app = FastAPI()
+
+
+# `task_func` is PyWebIO task function
+app.mount("/tool", FastAPI(routes=webio_routes(explore)))
+
+
+
+@app.websocket("/ws_explore")
+async def ws_explore(websocket: WebSocket):
+    await websocket.accept()
+    while True:
+        data = await websocket.receive_text()
+        await websocket.send_text(f"Message text was: {data}")
 
 
 def _get_body(request):
