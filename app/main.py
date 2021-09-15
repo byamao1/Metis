@@ -18,7 +18,7 @@ from app.service.explore.data_explore import explore
 app = FastAPI()
 
 
-# `task_func` is PyWebIO task function
+# `explore` is PyWebIO task function
 app.mount("/tool", FastAPI(routes=webio_routes(explore)))
 
 

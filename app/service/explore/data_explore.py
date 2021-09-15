@@ -54,10 +54,16 @@ def _detect_show(df, detector, title):
             anomalies = detector.detect(s)
 
         if anomalies.dtype == np.float:
-            fig = px.scatter(df, x="time", y="data", color=anomalies, title=title,
+            fig = px.scatter(df, x="time", y="data",
+                             color=anomalies,
+                             category_orders={'time': df['time']},
+                             title=title,
                              color_continuous_scale=['rgba(0,0,255,0.2)', 'red'])
         else:
-            fig = px.scatter(df, x="time", y="data", color=anomalies, title=title,
+            fig = px.scatter(df, x="time", y="data",
+                             color=anomalies,
+                             category_orders={'time': df['time']},
+                             title=title,
                              color_discrete_map={True: 'red', False: 'rgba(0,0,255,0.2)'})
 
         html = fig.to_html(include_plotlyjs="require", full_html=False)
