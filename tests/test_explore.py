@@ -3,6 +3,8 @@
 # @Time    : 2021/9/13 13:31
 # @Author  : Baiyu
 # @File    : test_explore.py
+import datetime
+import time
 from io import BytesIO
 
 import pandas as pd
@@ -20,7 +22,30 @@ import plotly.express as px
 from app.service.explore.data_explore import _check_data, _detect_show
 
 
-def show_fn():
+def show_lines():
+    csv_object = file_upload("Select a csv:", accept=".csv")
+
+    bio = BytesIO()
+    bio.write(csv_object['content'])
+    bio.seek(0)
+    df = pd.read_csv(bio, parse_dates=['time'], infer_datetime_format=True,)
+
+    # 获取整分钟的数据点
+    df = df[df.apply(lambda x: x['time'].second == 0, axis=1)]
+
+
+    # Filter by time
+    # s_date = pd.to_datetime('2021/9/20 00:00:00', format='%Y/%m/%d %H:%M:%S')
+    # e_date = pd.to_datetime('2021/9/21 00:00:00', format='%Y/%m/%d %H:%M:%S')
+    # df = df[(s_date <= df['time']) & (df['time'] < e_date)]
+    # df.to_csv("单日.csv", encoding='utf-8', index=False)
+
+    fig = px.line(df, x='time', y=df.columns[:13], width=1500, height=800)
+    html = fig.to_html(include_plotlyjs="require", full_html=False)
+    put_html(html)
+
+
+def anomaly_detect():
     # data = {
     #     "time": [
     #         '2017-1-2 10:59:59.999999999',
@@ -55,7 +80,9 @@ def show_fn():
     bio = BytesIO()
     bio.write(csv_object['content'])
     bio.seek(0)
-    df = pd.read_csv(bio)
+    df = pd.read_csv(bio, parse_dates=['time'], infer_datetime_format=True,)
+    # 获取整分钟的数据点
+    df = df[df.apply(lambda x: x['time'].second == 0, axis=1)]
     df = _check_data(df)
 
     # detect_show(df, ThresholdAD(high=30, low=15), 'ThresholdAD')
@@ -71,4 +98,4 @@ def show_fn():
 
 if __name__ == '__main__':
     # 显示为2个功能。这里把访问端口改为 80
-    pywebio.start_server([show_fn], port=80)
+    pywebio.start_server([show_lines, anomaly_detect], port=80)

